@@ -1,0 +1,37 @@
+
+/*BODY*/
+
+.postcard-content {
+    background-image: url(/css/images/postcard.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/*PostCard Content-Left
+    - Session Title
+    - Session Content (Links)
+*/
+
+.content-left {
+    position: relative;
+}
+
+.SessionTitle {
+    height: 50%;
+}
+
+/*PostCard Context-Right
+    - User Profile Pic
+    - Category
+    - To: (Contact)
+*/
+
+.context-right {
+    position: relative;
+}
+
+.profile-pic {
+
+}

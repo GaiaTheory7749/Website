@@ -6,10 +6,13 @@
     <meta name="author" content="Mnemco.com">
 
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+    <link href="css/website/index.css">
+
     <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/npm.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
-<body>
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -32,7 +35,7 @@
             </ul>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" placeholder="Search Experience...">
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
@@ -54,7 +57,87 @@
     </div><!-- /.container-fluid -->
 </nav>
 
+<body>
+
+<section id="post-template" data-type="background">
+    <div class="container sessioncard">
+       <div class="row postcard-content">
+           <div class="jumbotron postcard">
+               <div class="col-xs-6 content-left">
+                   <h2 class="SessionTitle">Session Title</h2>
+
+                   <div id="SessionContent">
+                       <h3>Session Content</h3>
+
+                       <div class="container-fluid">
+                           <li>1st Link</li>
+                           <li>2nd Link</li>
+                           <li>n<sup>th</sup> Link</li>
+                       </div>
+                   </div>
+               </div>
+
+               <div class=".col-xs-6 .col-sm-3  context-right">
+                   <div class="profile-pic">
+                       <img class="img-responsive" src="css/images/user-profile/user-test.jpg" align="right">
+                   </div>
+
+                   </br>
+                   </br>
+                   </br>
+
+                   <div id="category">
+                       <h3>Category: </h3>
+                   </div>
+
+                   <div id="contact">
+                       <h3>To: </h3>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+</section>
+
+<!--
+<section id="post-template" data-type="background">
+    <div class="postcard">
+        <img class="img-responsive center-block" src="images/postcard.png"  alt="">
+        <div class="PostCard-Content">
+            <h1 class="Title">Session Title - Something, Something...</h1>
+            <div id="SessionTitle">
+                <h1>Session Title - Something, Else...</h1>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="postcard" data-type="background">
+    <div class="container" class="container-fluid">
+        <div class="row-fluid">
+            <div class="PostCard-Content">
+
+                <img src="images/postcard.png"
+                     alt="Session Content Container"
+                     title="Session Postcard"
+                        />
+                <h1>Session Title</h1>
+
+                <div class="caption">
+                    <h1>Session Title - Something, Something...</h1>
+                </div>
+                <div id="SessionTitle">
+                    <h1>Session Title - Something, Else...</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
 <section id="intro" data-speed="6" data-type="background">
+    <!--
     <div class="container">
         <div id="PostCard-wrapper">
             <img src="images/postcard.png"
@@ -80,7 +163,7 @@
                     <li>2nd Link</li>
                     <li>n<sup>th</sup> Link</li>
                 </div>
-
+                -->
                 <hr>
 
                 <div id="SessionCategory">
@@ -101,11 +184,11 @@
                             </selct>
                         </form>
                     </fieldset>
-
                 </div>
 
                 </br>
 
+                <!--
                 <div id="SessionTags">
                     <fieldset>
                         <legend>Tags</legend>
@@ -127,6 +210,7 @@
                 </div>
 
                 </br>
+                -->
 
                 <div id = "ShareTo">
                     <h4>To: </h4>
