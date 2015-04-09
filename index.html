@@ -14,6 +14,8 @@
     <script src="js/bootstrap.min.js"></script>
 </head>
 
+<body>
+<!--------------------------NavBar TOP -------------------------------------->
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -24,32 +26,48 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">MNEMCO</a>
+            <a class="navbar-brand" href="#">MNEMCO</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Experience<span class="sr-only">(current)</span></a></li>
-                <li><a href="#">The Library</a></li>
-            </ul>
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search Experience...">
+            <form class="navbar-form navbar-left" role="search" style="padding-left:210px">
+                <div class="row" style="width:635px">
+                    <div class="col-sm-2">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                                Search All
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">PostCard</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Deck/Exp. Book</a></li>
+                                <li class="divider"></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Social</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Org/Groups</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Forum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search" style="width:400px">
+                        </div>
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Social Net</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Profile<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Account<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Account Details</a></li>
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">Log Out</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-star"></span> Favorites</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-th-list"></span> Preferences</a></li>
                         <li class="divider"></li>
+                        <li><a href="#">Settings</a></li>
                         <li><a href="#">Help</a></li>
-                        <li><a href="#">Report Problem</a></li>
+                        <li><a href="#">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -57,226 +75,313 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-<body>
+<div id="Workspace" class="container-full">
+    <div class="row">
 
-<section id="post-template" data-type="background">
-    <div class="container sessioncard">
-       <div class="row postcard-content">
-           <div class="jumbotron postcard">
-               <div class="col-xs-6 content-left">
-                   <h2 class="SessionTitle">Session Title</h2>
-
-                   <div id="SessionContent">
-                       <h3>Session Content</h3>
-
-                       <div class="container-fluid">
-                           <li>1st Link</li>
-                           <li>2nd Link</li>
-                           <li>n<sup>th</sup> Link</li>
-                       </div>
-                   </div>
-               </div>
-
-               <div class=".col-xs-6 .col-sm-3  context-right">
-                   <div class="profile-pic">
-                       <img class="img-responsive" src="css/images/user-profile/user-test.jpg" align="right">
-                   </div>
-
-                   </br>
-                   </br>
-                   </br>
-
-                   <div id="category">
-                       <h3>Category: </h3>
-                   </div>
-
-                   <div id="contact">
-                       <h3>To: </h3>
-                   </div>
-               </div>
-           </div>
-        </div>
-    </div>
-</section>
-
-<!--
-<section id="post-template" data-type="background">
-    <div class="postcard">
-        <img class="img-responsive center-block" src="images/postcard.png"  alt="">
-        <div class="PostCard-Content">
-            <h1 class="Title">Session Title - Something, Something...</h1>
-            <div id="SessionTitle">
-                <h1>Session Title - Something, Else...</h1>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section id="postcard" data-type="background">
-    <div class="container" class="container-fluid">
-        <div class="row-fluid">
-            <div class="PostCard-Content">
-
-                <img src="images/postcard.png"
-                     alt="Session Content Container"
-                     title="Session Postcard"
-                        />
-                <h1>Session Title</h1>
-
-                <div class="caption">
-                    <h1>Session Title - Something, Something...</h1>
-                </div>
-                <div id="SessionTitle">
-                    <h1>Session Title - Something, Else...</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
--->
-
-<section id="intro" data-speed="6" data-type="background">
-    <!--
-    <div class="container">
-        <div id="PostCard-wrapper">
-            <img src="images/postcard.png"
-                 alt="Session Content Container"
-                 title="Session Postcard"
-            />
-
-            <ul>
-                <div id="SessionTitle">
-                    <h4>Session Title: </h4>
-                    <p><b>+ Session Title on the Same Line as the Header</b></p>
-                    <p><b>Note: </b><i>Default Session Title is the 1st Link's HTML Title</i></p>
-                </div>
-
-                </br>
-
-                <div id="SessionContent">
-                    <h4>Session Content</h4>
-                    <p><b>Note: </b><i>1. Link Title = HTML Title</i></p>
-                    <p><b>Note: </b><i>2. HyperLink each Link Listed</i></p>
-                    <p><b>Note: </b><i>PostCard Vertical Size should adjust Vertically if Links Exceed Vertical Size</i></p>
-                    <li>1st Link</li>
-                    <li>2nd Link</li>
-                    <li>n<sup>th</sup> Link</li>
-                </div>
-                -->
-                <hr>
-
-                <div id="SessionCategory">
-                    <fieldset>
-                        <legend>Categories</legend>
-                        <br />
-                        <input type="search" name="search" placeholder="Search a Category or Add It Here" />
-                        <input type="submit" value="Search" />
-
-                        <hr>
-
-                        <form action="">
-                            <selct name="SessionCategory">
-                                <option value="Business">Business</option>
-                                <option value="Education">Education</option>
-                                <option value="Shopping">Shopping</option>
-                                <option value="Technology">Technology</option>
-                            </selct>
-                        </form>
-                    </fieldset>
-                </div>
-
-                </br>
-
-                <!--
-                <div id="SessionTags">
-                    <fieldset>
-                        <legend>Tags</legend>
-                        <br />
-                        <input type="search" name="search" placeholder="Search a Category or Add It Here" />
-                        <input type="submit" value="Search" />
-
-                        <hr>
-
-                        <form action="">
-                            <selct name="SessionTag" size="5" multiple="multiple">
-                                <option value="Business Model">Business Model</option>
-                                <option value="Interesting">Interesting</option>
-                                <option value="Random">Random</option>
-                                <option value="Software">Software</option>
-                            </selct>
-                        </form>
-                    </fieldset>
-                </div>
-
-                </br>
-                -->
-
-                <div id = "ShareTo">
-                    <h4>To: </h4>
-                    <p><b>+ User Accounts Images for PostCard to be Sent To</b></p>
-                    <p><b>Note: </b><i>If public, indicate PUBLIC</i></p>
-
-                    <fieldset>
-                        <legend>Share To</legend>
-                        <br />
-                        <input type="search" name="search" placeholder="Search a Contact" />
-                        <input type="submit" value="Search" />
-
-                        <hr>
-
-                        <form action="">
-                            <selct name="SessionTag" size="5" multiple="multiple">
-                                <option value="Public">Public</option>
-                                <option value="Contact 1">Contact 1</option>
-                                <option value="Contact 2">Contact 2</option>
-                                <option value="Contact 3">Contact 3</option>
-
-
-                                <button>Local</button>
-                                <button>Groups</button>
-                                <button>Facebook</button>
-                                <button>Twitter</button>
-                            </selct>
-                        </form>
-                    </fieldset>
-
-                </div>
-
-                </br>
-
-                <div id="UserProfilePic">
-                    <h4>From: </h4>
-                    <p><b>+ User Account Profile Pic</b></p>
-                    <p><b>Note: </b><i>This is only for Test Purposes...User Account Sending will be a PostStamp above Category at the Top-Right</i></p>
-                </div>
-
-                <hr>
-
-                <div id="CommentBox">
-                    <h4>Comments</h4>
-                    <p><i>Add Comment Box Here, Features are Below:</i></p>
-                    <p><b><i>+ Rating (Up/Down Vote)</i></b></p>
-                    <p><b><i>+ Reply Button (To Specific Post)</i></b></p>
-                    <p><b><i>+ Reply All Button</i></b></p>
-                    <p><b><i>+ Delete Button (For Admin Only?)</i></b></p>
-
-                    <form action="">
-                        <button>Up</button>
-                        <button>Down</button>
-
-                        <textarea name="comments" cols="75" rows="5">What do you think of the Session...</textarea>
-                        <button>Reply</button>
-                        <button>Delete</button>
-                        <br />
-
-                        <button>Reply All</button>
-                    </form>
-                </div>
+        <!------------------------------Site Navbar (Left) ----------------------------->
+        <div id="LeftNav" class="col-md-2 pull-left">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="active"><a href="#">Create+</a></li>
+                <li role="presentation"><a href="#">Experience Library</a></li>
+                <li role="presentation"><a href="#">Social Network</a></li>
+                <li role="presentation"><a href="#">The Forum</a></li>
             </ul>
         </div>
+
+        <!--------------------------Page Content (Center) ------------------------------>
+        <div id="content" class="col-md-7">
+
+            <!--Content Menu-->
+            <!--NavBar Menu:
+                http://www.bootply.com/6xETq5sX1z
+            -->
+            <div class="container-full">
+                <div class="row">
+                    <div class="col-md-11">
+                        <nav class="navbar navbar-default" role="navigation" id="topmenu">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" data-toggle="collapse" data-target="#one">PostCard</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" data-toggle="collapse" data-target="#two">Deck</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" data-toggle="collapse" data-target="#three">Experience Book</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <!--PostCard (Session) Container -->
+            <div id="pcContainer" class="container-fluid">
+                <div class="row">
+                    <div class="col-md-10">
+                         <div id="postcard" class="jumbotron" style="background-image: url(css/images/postcard.png); background-size: cover; height:500px; width:900px">
+                            <div class="col-md-7 content-left pull-left">
+                                <h2 class="pcTitle">Starting Up Now...</h2>
+                                </br>
+                                </br>
+                                <div id="pcContent">
+                                    <div id="pcLink" class="container">
+                                        <div class="row">
+                                            <div class="col-xs-1" style="padding-top:20px">
+                                                <img class="imgWorkSpace" src="images/tImage1.jpg" style="width:25px; height:25px">
+                                            </div>
+                                            <div class="col-xs-9">
+                                                <h3>Session Content Link....</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-1" style="padding-top:20px">
+                                                <img class="imgWorkSpace" src="images/tImage1.jpg" style="width:25px; height:25px">
+                                            </div>
+                                            <div class="col-xs-9">
+                                                <h3>Session Content Link....</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-1" style="padding-top:20px">
+                                                <img class="imgWorkSpace" src="images/tImage1.jpg" style="width:25px; height:25px">
+                                            </div>
+                                            <div class="col-xs-9">
+                                                <h3>Session Content Link....</h3>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-1" style="padding-top:20px">
+                                                <img class="imgWorkSpace" src="images/tImage1.jpg" style="width:25px; height:25px">
+                                            </div>
+                                            <div class="col-xs-9">
+                                                <h3>Session Content Link....</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-5 content-right" style="padding-left:50px">
+                                <div class="profile-pic">
+                                    <img class="img-responsive" src="css/images/user-profile/user-test.jpg" align="right">
+                                </div>
+
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+                                </br>
+
+                                <div id="category">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <h3>Category: </h3>
+                                        </div>
+                                        <div class="col-sm-3 col-sm-offset-2">
+                                            <h3><span class="label label-default">Startup</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="contact">
+                                    <div class="row">
+                                        <div class="col-sm-1">
+                                            <h3>To: </h3>
+                                        </div>
+                                        <div class="col-sm-4 col-sm-offset-1" style="padding-top:15px">
+                                            <img src="css/images/user-profile/user-test.jpg" class="img-circle">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="pcButton" class="col-md-10">
+                    <button type="submit" class="btn btn-default pull-right">Send</button>
+                </div>
+            </div>
+
+            </br>
+            </br>
+
+            <!--PostCard (Session) Comment Section -->
+            <div id="CommentSpace" class="container-full">
+                <h3>Comments</h3>
+
+                <div id="CommentMenuRow" class="col-md-10">
+                    <ul class="nav nav-tabs">
+                        <li role="presentation" class="active"><a href="#">Top</a></li>
+                        <li role="presentation"><a href="#">New</a></li>
+                        <li role="presentation"><a href="#">Old</a></li>
+                    </ul>
+                </div>
+
+                <div id="CommentRow" class="col-md-10">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="usr">
+                    </div>
+                    <button type="submit" class="btn btn-default pull-right">Post</button>
+                    </br>
+                    <hr>
+                </div>
+
+                <!--Comment Respond -->
+
+                <div class="container-full">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-arrow-up"></span></button>
+                                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-arrow-down"></span></button>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="usr">
+                                </div>
+                                <button type="submit" class="btn btn-default pull-right"><span class="glyphicon glyphicon-share-alt"></span></button>
+                                <button type="submit" class="btn btn-default pull-right "><span class="glyphicon glyphicon-flag"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-------------------------Page Navbar (Right)----------------------------------->
+        <div id="RightNav" class="col-md-3 pull-right">
+            <nav class="navbar navbar-default">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Session Details<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Contact Share</a></li>
+                </ul>
+            </nav>
+
+            <div id="dName">
+                <h4>Starting Up Now...</h4>
+            </div>
+
+            <div id="dCategory">
+                <div class="container-full">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <h4>Category: </h4>
+                        </div>
+                        <div class="col-xs-6">
+                            <h4><span class="label label-default">Startup</span></h4>
+                        </div>
+                    </div>
+
+                    </br>
+
+                    <!--Details Category Dropdown -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search / Add...">
+                                        <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">Search / Add</button>
+                                        </span>
+                                </div>
+                            </div>
+                        </div><!-- /.row -->
+                        </br>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-1">
+                                <h4><span class="label label-default">Startup</span></h4>
+                                <h4><span class="label label-default">Business</span></h4>
+                            </div>
+                            <div class="col-xs-6 col-sm-1">
+                                <h4><span class="label label-default">Technology</span></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </br>
+
+            <div id="dContact">
+                <div class="container-full">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-1">
+                            <h4>To: </h4>
+                        </div>
+                        <div class="col-xs-6 col-sm-4">
+                            <img src="css/images/user-profile/user-test.jpg" class="img-circle">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <hr>
+
+            <div id="dPreview">
+                <h4>Content Preview</h4>
+                <div class="container-full">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <!-- Preview Screen -->
+                            <img class="imgWorkSpace" src="images/tImage1.jpg" style="width:100px; height:125px">
+                        </div>
+                        <!--Preview Screen Description -->
+                        <div class="col-md-4">
+                            <div class="container-full">
+                                <h6><b>Content Link 1</b></h6>
+                                <p><i>Here is a brief description of a Session Link</i></p>
+
+                                <h5><b>1 / 4</b></h5>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                </br>
+                <!-- Preview Content -->
+                <div class="container-full">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <img class="" src="" style="width:20px; height:20px">
+                        </div>
+                        <div class="col-sm-4">
+                            <h5>Session Link 1</h5>
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                    </div>
+                    <h5>Session Link 2</h5>
+                    <h5>Session Link 3</h5>
+                    <h5>Session Link 4</h5>
+                </div>
+            </div>
+
+            <hr>
+
+            <div id="Attachments">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <h4>Attachments:</h4>
+                    </div>
+                    <div class="col-xs-3" style="padding-top:5px">
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-file"></span></button>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
     </div>
-</section>
+</div>
 
 </body>
 </html>
