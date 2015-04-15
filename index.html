@@ -187,7 +187,7 @@
                                     </div>
                                 </div>
 
-                                <div id="contact">
+                                <div id="pcContact">
                                     <div class="row">
                                         <div class="col-sm-1">
                                             <h3>To: </h3>
@@ -201,46 +201,85 @@
                         </div>
                     </div>
                 </div>
-                <div id="pcButton" class="col-md-10">
-                    <button type="submit" class="btn btn-default pull-right">Send</button>
-                </div>
-            </div>
 
-            </br>
+                <div id="pcButtonMenu" class="row">
+                    <div id="pcButtonContentDetails" class="col-md-2 pull-left">
+                        <button type="submit" class="btn btn-default pull-left"><span class="glyphicon glyphicon-list-alt"></span> PostCard Links</button>
+                    </div>
+                    <div id="pcButtonOpen" class="col-md-2 pull-left">
+                        <button type="submit" class="btn btn-default pull-left"><span class="glyphicon glyphicon-new-window"></span> Open PostCard</button>
+                    </div>
+                    <div id="pcButtonShare" class="col-md-5 pull-right">
+                        <button type="submit" class="btn btn-default pull-right"><span class="glyphicon glyphicon-envelope"></span> Send</button>
+                    </div>
+                </div>
+
+            </div> <!--pcContainer -->
 
             <!--PostCard (Session) Comment Section -->
-            <div id="CommentSpace" class="container-full">
+            <div id="pcCommentSpace" class="container-full">
                 <h3>Comments</h3>
 
-                <div id="CommentMenuRow" class="col-md-10">
+                <div id="pcCommentMenuRow" class="col-md-10">
                     <ul class="nav nav-tabs">
-                        <li role="presentation" class="active"><a href="#">Top</a></li>
-                        <li role="presentation"><a href="#">New</a></li>
-                        <li role="presentation"><a href="#">Old</a></li>
+                        <li role="presentation" class="active"><a data-toggle="tab" href="#pcCommentRow">Top</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#pcCommentRowNew">New</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#pcCommentRowOld">Old</a></li>
                     </ul>
-                </div>
 
-                <div id="CommentRow" class="col-md-10">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="usr">
-                    </div>
-                    <button type="submit" class="btn btn-default pull-right">Post</button>
-                    </br>
-                    <hr>
-                </div>
+                    <div class="tab-content">
+                        <div id="pcCommentRowTop" class="col-md-10 tab-pane fade in active">
+                            </br>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" id="commentbox1"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-default pull-right">Post</button>
+                            </br>
+                            <hr>
+                        </div>
+
+                        <div id="pcCommentRowNew" class="col-md-10 tab-pane fade">
+                            </br>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" id="commentbox1a"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-default pull-right">Post</button>
+                            </br>
+                            <hr>
+                        </div>
+
+                        <div id="pcCommentRowOld" class="col-md-10 tab-pane fade">
+                            </br>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" id="commentbox1b"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-default pull-right">Post</button>
+                            </br>
+                            <hr>
+                        </div>
+                    </div> <!--tab-content-->
+                </div> <!--pcCommentMenuRow -->
+
 
                 <!--Comment Respond -->
 
                 <div class="container-full">
                     <div class="row">
                         <div class="col-md-10">
-                            <div class="col-sm-2">
+                            <div class="col-sm-1" style="padding-top:35px">
                                 <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-arrow-up"></span></button>
+                                <h6 style="text-align: center">25 Ups</h6>
                                 <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-arrow-down"></span></button>
                             </div>
                             <div class="col-md-10">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="usr">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <h6 id="userComment"><i>Thanh Nguyen, </i>12:58pm, 4/16/2015</h6>
+                                        </div>
+                                    </div>
+
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-default pull-right"><span class="glyphicon glyphicon-share-alt"></span></button>
                                 <button type="submit" class="btn btn-default pull-right "><span class="glyphicon glyphicon-flag"></span></button>
@@ -250,7 +289,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> <!-- content -->
 
         <!-------------------------Page Navbar (Right)----------------------------------->
         <div id="RightNav" class="col-md-3 pull-right">
@@ -262,10 +301,10 @@
 
                 <!--prePCDetails -->
                 <div id="prePCDetails" class="tab-pane fade in active">
-                    <div id="prePCDetails" class="container-full">
+                    <div id="prePCDetailsContainer" class="container-full">
                         <!--Preview: Title -->
                         <div id="dName">
-                            <h4>Title Here...</h4>
+                            <h4>Starting Up Now...</h4>
                         </div>
 
                         <!--Preview: Tag -->
@@ -273,10 +312,10 @@
                             <div class="container-full">
                                 <div class="row">
                                     <div class="col-xs-2">
-                                        <h4>Tags: </h4>
+                                        <h4>Category: </h4>
                                     </div>
-                                    <div class="col-xs-6">
-                                        <h4><span class="label label-default">Home</span></h4>
+                                    <div class="col-xs-6 col-xs-offset-1">
+                                        <h4><span class="label label-default">Startup</span></h4>
                                     </div>
                                 </div>
 
@@ -389,31 +428,66 @@
                 <!--ContactListContainer -->
                 <div id="ContactListContainer" class="tab-pane fade">
                     <!--Conatct Share Menu -->
-                    <div id="ContactListContainer" class="container-full">
-                        </br>
-                        <div id="Contact Searchbox">
-                            <input type="text" class="form-control" placeholder="Search / Add...">
-                        </div>
-                        <hr>
-                        <div id="ContactContainer" class="container-full">
-                            <div id="contact">
-                                <div class="row">
-                                    <div id="contactPic" class="col-xs-2">
-                                        <img src="css/images/user-profile/user-test.jpg">
+                    <div id="ContactSocialContainer" class="container-full">
+
+                        <!--RightNav Contact Social Network Menu -->
+                        <div id="ContactSocialMenu">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#ContactLocal">Local</a></li>
+                                <li><a data-toggle="tab" href="#ContactTwitter">Twitter</a></li>
+                                <li><a data-toggle="tab" href="#ContactFacebook">Facebook</a></li>
+                            </ul>
+                            </br>
+                            <div id="ContactSearchbox" style="width:300px">
+                                <input type="text" class="form-control" placeholder="Find Friends...">
+                            </div>
+                            <hr>
+
+                            <div class="tab-content">
+                                <!--MnemCo Local Container -->
+                                <div id="ContactLocal" class="tab-pane fade in active">
+                                    <div id="ContactLocalContainer" class="container-full">
+                                        <div id="contact">
+                                            <div class="row">
+                                                <div id="contactPic" class="col-xs-2">
+                                                    <img src="css/images/user-profile/user-test.jpg">
+                                                </div>
+                                                <div id="contactName" class="col-xs-6">
+                                                    <h4>Thanh Nguyen</h4>
+                                                </div>
+                                                <div id="contactSelect" class="col-xs-2">
+                                                    <div class="checkbox">
+                                                        <label><input type="checkbox" value=""></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div id="contactName" class="col-xs-8">
-                                        <h4>Thanh Nguyen</h4>
+                                </div>
+                                <!--MnemCo Twitter Container -->
+                                <div id="ContactTwitter" class="tab-pane fade">
+                                    <div class="form-group">
+                                        <textarea class="form-control" rows="3" id="TwitterPost">140 Characters left...</textarea>
                                     </div>
+                                    <button type="submit" class="btn btn-default pull-right">Tweet</button>
+                                </div>
+                                <!--MnemCo Facebook Container -->
+                                <div id="ContactFacebook" class="tab-pane fade">
+                                    <div class="form-group">
+                                        <textarea class="form-control" rows="3" id="FacebookPost">What's on your mind...</textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-default pull-right">Post</button>
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                 </div> <!--ContactListContainer (Tab) -->
 
             </div>
 
-        </div>
+        </div> <!--RightNav-->
 
     </div>
 </div>
