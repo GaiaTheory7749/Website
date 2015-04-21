@@ -23,45 +23,52 @@
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="index.html">MNEMCO</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <form class="navbar-form navbar-left" role="search" style="padding-left:210px">
-                <div class="row" style="width:635px">
-                    <div class="col-sm-2">
-                        <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                                Search All
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">PostCard</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Deck/Exp. Book</a></li>
-                                <li class="divider"></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Social</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Org/Groups</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Forum</a></li>
-                            </ul>
-                        </div>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="row" style="width:100%">
+                    <div class="col-sm-1 col-sm-push-1">
+                        <form>
+                            <div class="btn-group">
+                                <a class="btn dropdown-toggle btn-select" data-toggle="dropdown" href="#">Search All <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">PostCard</a></li>
+                                    <li><a href="#">Deck/Exp. Book</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Social</a></li>
+                                    <li><a href="#">Org Groups</a></li>
+                                    <li><a href="#">Forums</a></li>
+                                </ul>
+                            </div> <!--.btn-group Search Filter Selection Group -->
+                        </form>
+
+                        <!--Search Filter Selection Script  -->
+                        <!--http://stackoverflow.com/questions/17061812/display-selected-item-in-bootstrap-button-dropdown-title-place-holder-text-->
+                        <script>
+                            $(".dropdown-menu li a").click(function(){
+                                var selText = $(this).text();
+                                $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+                            });
+                        </script>
                     </div>
-                    <div class="col-md-10">
+                    <div class="col-sm-10 col-sm-push-2" style="padding-left:30px">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search" style="width:400px">
+                            <input type="text" class="form-control" placeholder="Search" style="width:350px">
                         </div>
                         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                     </div>
-                </div>
-            </form>
+                </div> <!--row-->
+            </form> <!-- Search NavBar Form -->
+
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User Account<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                        <li><a href="userprofile.html"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-star"></span> Favorites</a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-th-list"></span> Preferences</a></li>
                         <li class="divider"></li>
@@ -297,237 +304,258 @@
                 <li class="active"><a data-toggle="tab" href="#prePCDetails">Content Details</a></li>
                 <li><a data-toggle="tab" href="#ContactListContainer">Contact Share</a></li>
             </ul>
-            <div class="tab-content">
 
-                <!--prePCDetails -->
-                <div id="prePCDetails" class="tab-pane fade in active">
-                    <div id="prePCDetailsContainer" class="container-full">
-                        <!--Preview: Title -->
-                        <div id="dName">
-                            <h4>Starting Up Now...</h4>
-                        </div>
+            <div id="RightNavContact" class="container-full">
+                <div class="tab-content" style="padding-left:10px">
+                    <!--prePCDetails -->
+                    <div id="prePCDetails" class="tab-pane fade in active">
+                        <div id="prePCDetailsContainer" class="container-full">
+                            <!--Preview: Title -->
+                            <div id="dName">
+                                <h4>Starting Up Now...</h4>
+                            </div>
 
-                        <!--Preview: Tag -->
-                        <div id="dCategory">
-                            <div class="container-full">
-                                <div class="row">
-                                    <div class="col-xs-2">
-                                        <h4>Category: </h4>
-                                    </div>
-                                    <div class="col-xs-6 col-xs-offset-1">
-                                        <h4><span class="label label-default">Startup</span></h4>
-                                    </div>
-                                </div>
-
-                                </br>
-
-                                <!--Details Category Dropdown -->
-                                <div class="container">
+                            <!--Preview: Tag -->
+                            <div id="dCategory">
+                                <div class="container-full">
                                     <div class="row">
-                                        <div class="col-xs-6 col-sm-3">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="Search / Add...">
+                                        <div class="col-xs-2">
+                                            <h4>Category: </h4>
+                                        </div>
+                                        <div class="col-xs-6 col-xs-offset-1">
+                                            <h4><span class="label label-default">Startup</span></h4>
+                                        </div>
+                                    </div>
+
+                                    </br>
+
+                                    <!--Details Category Dropdown -->
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-3">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" placeholder="Search / Add...">
                                                     <span class="input-group-btn">
-                                                    <button class="btn btn-default" type="button">Search/Add</button>
+                                                        <button class="btn btn-default" type="button">Search/Add</button>
                                                     </span>
+                                                </div>
+                                            </div>
+                                        </div><!-- /.row -->
+                                        </br>
+                                        <div class="row">
+                                            <div class="col-xs-6 col-sm-1">
+                                                <h4><span class="label label-default">Startup</span></h4>
+                                                <h4><span class="label label-default">Technology</span></h4>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-1">
+                                                <h4><span class="label label-default">Business</span></h4>
                                             </div>
                                         </div>
-                                    </div><!-- /.row -->
-                                    </br>
+                                    </div>
+                                </div>
+                            </div>
+
+                            </br>
+
+                            <!--Preview: Contact -->
+                            <div id="dContact">
+                                <div class="container-full">
                                     <div class="row">
                                         <div class="col-xs-6 col-sm-1">
-                                            <h4><span class="label label-default">Startup</span></h4>
-                                            <h4><span class="label label-default">Technology</span></h4>
+                                            <h4>To: </h4>
                                         </div>
-                                        <div class="col-xs-6 col-sm-1">
-                                            <h4><span class="label label-default">Business</span></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        </br>
-
-                        <!--Preview: Contact -->
-                        <div id="dContact">
-                            <div class="container-full">
-                                <div class="row">
-                                    <div class="col-xs-6 col-sm-1">
-                                        <h4>To: </h4>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-4">
-                                        <img src="css/images/user-profile/user-test.jpg" class="img-circle">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <hr>
-
-                        <!--Preview: Content Section -->
-                        <div id="dPreview">
-                            <h4>Content Preview</h4>
-                            <div class="container-full">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <!-- Preview Screen -->
-                                        <img class="imgWorkSpace" src="images/tImage1.jpg" style="width:100px; height:125px">
-                                    </div>
-                                    <!--Preview Screen Description -->
-                                    <div class="col-md-6" style="padding-right:20px">
-                                        <div class="container-full">
-                                            <h6><b>Content Link 1</b></h6>
-                                            <p><i>Here is a brief description of a Content Link</i></p>
-
-                                            <h5><b>1 / 4</b></h5>
+                                        <div class="col-xs-6 col-sm-4">
+                                            <div id="preExpContact" img src="css/images/user-profile/user-test.jpg" class="img-circle">
+                                            </div>
                                         </div>
                                     </div>
 
                                 </div>
                             </div>
-                            </br>
-                            <!-- Preview Content -->
-                            <div class="container-full">
-                                <div class="row">
-                                    <div class="col-sm-1">
-                                        <img class="" src="" style="width:20px; height:20px">
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <h5>Link 1</h5>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    </div>
-                                </div>
-                                <h5>Link 2</h5>
-                                <h5>Link 3</h5>
-                                <h5>Link 4</h5>
-                            </div>
-                        </div>
 
-                        <hr>
-
-                        <!--Preview: Attachments -->
-                        <div id="Attachments">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <h4>Attachments:</h4>
-                                </div>
-                                <div class="col-xs-3" style="padding-top:5px">
-                                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-file"></span></button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div> <!--prePCDetails-->
-
-                </div> <!--prePCDetails (Tab) -->
-
-                <!--ContactListContainer -->
-                <div id="ContactListContainer" class="tab-pane fade">
-                    <!--Conatct Share Menu -->
-                    <div id="ContactSocialContainer" class="container-full">
-
-                        <!--RightNav Contact Social Network Menu -->
-                        <div id="ContactSocialMenu">
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a data-toggle="tab" href="#ContactLocal">Local</a></li>
-                                <li><a data-toggle="tab" href="#ContactTwitter">Twitter</a></li>
-                                <li><a data-toggle="tab" href="#ContactFacebook">Facebook</a></li>
-                            </ul>
-                            </br>
-                            <div id="ContactSearchbox" style="width:300px">
-                                <input type="text" class="form-control" placeholder="Find Friends...">
-                            </div>
                             <hr>
 
-                            <div class="tab-content">
-                                <!--MnemCo Local Container -->
-                                <div id="ContactLocal" class="tab-pane fade in active">
-                                    <div id="ContactLocalContainer" class="container-full">
-                                        <div id="contact">
-                                            <div class="row">
-                                                <div id="contactPic" class="col-xs-2">
-                                                    <img src="css/images/user-profile/user-test.jpg">
+                            <!--Preview: Content Section -->
+                            <div id="dPreview">
+                                <h4>Content Preview</h4>
+                                <div class="container-full">
+                                    <div class="row">
+                                        <!-- Preview Screen -->
+                                        <div id="dPreScreen" class="col-xs-4">
+                                            <img class="imgWorkSpace" src="css/images/AcctImage.jpg" style="width:90px; height:125px">
+                                        </div>
+                                        <!--Preview Screen Description -->
+                                        <div id="dPreTextContainer" class="col-xs-6">
+                                            <div id="dPreDescription" class="container-full" style="height:90px">
+                                                <h6><b>Content Link 1</b></h6>
+                                                <p><i>Here is a brief description of a Content Link</i></p>
+                                            </div>
+                                            <div id="dPreLinkCounter" class="container-full" style="text-align:center">
+                                                <h5><b>1 / 4</b></h5>
+                                            </div>
+
+                                        </div>
+                                    </div> <!-- row -->
+                                </div>
+                                </br>
+                                <!-- Preview Content -->
+                                <div id="dPreLinks" class="container-full">
+                                    <div id="dPreLink" class="row" style="height:30px">
+                                        <div class="col-sm-1">
+                                            <img class="" src="" style="width:25px; height:25px">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <h5>Link 1</h5>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                    </div> <!-- row -->
+                                    <h5>Link 2</h5>
+                                    <h5>Link 3</h5>
+                                    <h5>Link 4</h5>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <!--Preview: Attachments -->
+                            <div id="Attachments">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <h4>Attachments:</h4>
+                                        <input type="file" id="exampleInputFile">
+                                        <!--
+                                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-file"></span></button>
+                                        -->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> <!--prePCDetails-->
+
+                    </div> <!--prePCDetails (Tab) -->
+
+                    <!--ContactListContainer -->
+                    <div id="ContactListContainer" class="tab-pane fade">
+                        <!--Conatct Share Menu -->
+                        <div id="ContactSocialContainer" class="container-full">
+
+                            <!--RightNav Contact Social Network Menu -->
+                            <div id="ContactSocialMenu" style="padding-top:5px">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href="#ContactLocal">Local</a></li>
+                                    <li><a data-toggle="tab" href="#ContactTwitter">Twitter</a></li>
+                                    <li><a data-toggle="tab" href="#ContactFacebook">Facebook</a></li>
+                                </ul>
+                                </br>
+                                <div id="ContactSearchbox" style="width:300px">
+                                    <input type="text" class="form-control" placeholder="Find Friends...">
+                                </div>
+                                <hr>
+
+                                <div class="tab-content">
+                                    <!--MnemCo Local Container -->
+                                    <div id="ContactLocal" class="tab-pane fade in active">
+                                        <div id="ContactLocalContainer" class="container-full">
+                                            <div id="contact">
+                                                <div class="row">
+                                                    <div id="contactPic" class="col-xs-2">
+                                                        <img src="css/images/user-profile/user-test.jpg">
+                                                    </div>
+                                                    <div id="contactName" class="col-xs-6">
+                                                        <h4>Thanh Nguyen</h4>
+                                                    </div>
+                                                    <div id="contactSelect" class="col-xs-2">
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value=""></label>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div id="contactName" class="col-xs-6">
-                                                    <h4>Thanh Nguyen</h4>
+                                            </div>
+                                        </div> <!--ContactLocalContainer -->
+                                    </div>  <!-- Contact Local -->
+
+                                    <!--MnemCo Twitter Container -->
+                                    <div id="ContactTwitter" class="tab-pane fade">
+                                        <div class="col-sm-11">
+                                            <div class="form-group">
+                                                <textarea class="form-control" rows="3" id="TwitterPost">140 Characters left...</textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-default pull-right">Tweet</button>
+
+                                        </div>
+
+                                        </br>
+                                        </br>
+                                        </br>
+
+                                        <div class="col-sm-11">
+                                            <div id="contactsTwitter">
+                                                <div class="row">
+                                                    <div id="contactPicTwitter" class="col-xs-2">
+                                                        <img src="css/images/user-profile/user-test.jpg">
+                                                    </div>
+                                                    <div id="contactNameTwitter" class="col-xs-6">
+                                                        <h4>Thanh Nguyen</h4>
+                                                    </div>
+                                                    <div id="contactSelectTwitter" class="col-xs-2">
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value=""></label>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div id="contactSelect" class="col-xs-2">
-                                                    <div class="checkbox">
-                                                        <label><input type="checkbox" value=""></label>
+                                            </div> <!-- #contactsTwitter -->
+                                        </div>
+
+                                    </div> <!-- #ContactTwitter -->
+
+                                    <!--MnemCo Facebook Container -->
+                                    <div id="ContactFacebook" class="tab-pane fade">
+
+                                        <div class="col-sm-11">
+                                            <div class="form-group">
+                                                <textarea class="form-control" rows="3" id="FacebookPost">What's on your mind...</textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-default pull-right">Post</button>
+
+                                        </div>
+
+                                        </br>
+                                        </br>
+                                        </br>
+
+                                        <div class="col-sm-11">
+                                            <div id="contactsFacebook">
+                                                <div class="row">
+                                                    <div id="contactPicFacebook" class="col-xs-2">
+                                                        <img src="css/images/user-profile/user-test.jpg">
+                                                    </div>
+                                                    <div id="contactNameFacebook" class="col-xs-6">
+                                                        <h4>Thanh Nguyen</h4>
+                                                    </div>
+                                                    <div id="contactSelectFacebook" class="col-xs-2">
+                                                        <div class="checkbox">
+                                                            <label><input type="checkbox" value=""></label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> <!--ContactLocalContainer -->
-                                </div>
-                                <!--MnemCo Twitter Container -->
-                                <div id="ContactTwitter" class="tab-pane fade">
-                                    <div class="form-group">
-                                        <textarea class="form-control" rows="3" id="TwitterPost">140 Characters left...</textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-default pull-right">Tweet</button>
-                                    </br>
-                                    </br>
-                                    </br>
-                                    <div id="contactsTwitter">
-                                        <div class="row">
-                                            <div id="contactPicTwitter" class="col-xs-2">
-                                                <img src="css/images/user-profile/user-test.jpg">
-                                            </div>
-                                            <div id="contactNameTwitter" class="col-xs-6">
-                                                <h4>Thanh Nguyen</h4>
-                                            </div>
-                                            <div id="contactSelectTwitter" class="col-xs-2">
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" value=""></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div> <!-- #ContactFacebook -->
+                                </div> <!-- .tab-content -->
 
-                                </div>
-                                <!--MnemCo Facebook Container -->
-                                <div id="ContactFacebook" class="tab-pane fade">
-                                    <div class="form-group">
-                                        <textarea class="form-control" rows="3" id="FacebookPost">What's on your mind...</textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-default pull-right">Post</button>
-                                    </br>
-                                    </br>
-                                    </br>
-                                    <div id="contactsFacebook">
-                                        <div class="row">
-                                            <div id="contactPicFacebook" class="col-xs-2">
-                                                <img src="css/images/user-profile/user-test.jpg">
-                                            </div>
-                                            <div id="contactNameFacebook" class="col-xs-6">
-                                                <h4>Thanh Nguyen</h4>
-                                            </div>
-                                            <div id="contactSelectFacebook" class="col-xs-2">
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox" value=""></label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            </div> <!-- #ContactSocialMenu -->
+                        </div> <!-- #ContactSocialContainer -->
+                    </div> <!--ContactListContainer (Tab) -->
 
-                    </div>
-
-                </div> <!--ContactListContainer (Tab) -->
-
-            </div>
-
+                </div> <!-- .tab-content -->
+            </div> <!-- #RightNavContact -->
         </div> <!--RightNav-->
 
-    </div>
-</div>
+    </div> <!-- .row (#Workspace) -->
+</div> <!-- #Workspace -->
+
 
 </body>
 </html>
